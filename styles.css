@@ -81,3 +81,8 @@ main {
 .btnSize:hover{
   scale: 3;
 }
+@keyframes slideInLeft{
+  from{
+    transform :translatex(-300px)
+  }
+}
