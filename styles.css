@@ -38,10 +38,25 @@ main {
 .slideInLeftCard {
   background-color: var(--cardFromLeft);
   color: whitesmoke;
+  transform: translateX(-300px);
+  animation-name:slideInLeft;
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
 }
+
+
 
 .slideInRightCard {
   background-color: var(--cardFromRight);
+  transform: translateX(300px);
+  animation-name:slideInRight;
+  animation-duration:1s;
+  animation-timing-function:ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .rotateCard {
@@ -85,4 +100,10 @@ main {
   from{
     transform :translatex(-300px)
   }
+  to {    transform :translatex(0px)}
+}
+@keyframes slideInRight {
+  from{
+    transform: translateX(300px) ;}
+    to {    transform :translatex(0px)}
 }
