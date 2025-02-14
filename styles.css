@@ -64,6 +64,9 @@ main {
   width: 100px;
   height: 100px;
   background-color: var(--rotate);
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
 }
 
 .hoverBtnContainer {
@@ -82,6 +85,12 @@ main {
   transition: 700ms;
   transition-timing-function: ease-in-out;
 }
+.btnSize:hover {
+scale: 3;
+}
+.btnColor:hover{
+  background-color: #8de969;
+}
 
 .btnOpacity {
   opacity: 0.3;
@@ -90,12 +99,7 @@ main {
 .btnOpacity:hover {
   opacity: 1;
 }
-.btnColor:hover {
-  background-color: #8de969;
-}
-.btnSize:hover{
-  scale: 3;
-}
+
 @keyframes slideInLeft{
   from{
     transform :translatex(-300px)
@@ -106,4 +110,19 @@ main {
   from{
     transform: translateX(300px) ;}
     to {    transform :translatex(0px)}
+}
+@keyframes rotate{
+  0%{}
+  50%{
+    scale: 2;
+    background-color: #120d31;
+    transform: rotate(0);
+    border-radius: 0;
+  }
+  100%{
+    border-radius: 100%;
+    background-color: #120d31;
+    transform: rotate(360deg);
+    scale: 2;
+  }
 }
